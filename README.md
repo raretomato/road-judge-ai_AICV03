@@ -162,8 +162,8 @@ pm2 save
 
 | Stage | 핵심 변경점 | Model 1 (장소) | Model 2 (특성) | Model 3 (차량A) | Model 4 (차량B) |
 |---|---|---|---|---|---|
-| 1. Baseline | CE, frame interval 2 | Top1: 82.20 | Top1: 72.93 | Top1: 67.12 | Top1: 65.43 |
-| 2. Focal | CE → Focal 탐색 | Top1: 81.86 | Top1: 70.12 | Top1: 64.75 | Top1: 64.75 |
+| 1. Baseline | CE, frame interval 2 | 82.20 | 72.93 | 67.12 | 65.43 |
+| 2. Focal | CE → Focal 탐색 | 81.86 | 70.12 | 64.75 | 64.75 |
 | **3. 최종 (LDAM)** | Focal → LDAM | **Top1: 82.20** | **Top1: 75.08** | **Top1: 68.25** | Top1: 68.75|
 
 ### 모델 2. 신속 처리 모델 (ResNet3D + I3D)
@@ -171,9 +171,9 @@ pm2 save
 
 | Stage | 핵심 변경점 | Model 1 (장소) | Model 2 (특성) | Model 3 (차량A) | Model 4 (차량B) |
 |---|---|---|---|---|---|
-| 1. Baseline | CE, frame interval 2 | 80.85 (Acc) | 71.80 (Acc) | 66.46 (Acc) | 66.31 (Acc) |
+| 1. Baseline | CE, frame interval 2 | 80.85 | 71.80 | 66.46 | 66.31 |
 | 2. Focal 튜닝 | α, γ 파라미터 튜닝 | 81.17 | 72.24 | 66.52 | 66.62 |
-| **3. 최종 (Fine-tune)**| LR 1e-5 + γ 조정 | **82.42** | **72.93** | **68.66** | **68.82** |
+| **3. 최종 (Fine-tune)**| LR 1e-5 + γ 조정 | **Top1: 82.42** | **Top1: 72.93** | **Top1: 68.66** | **Top1: 68.82** |
 
 ### 모델 3. 단순 처리 모델 (C3D)
 > **특징:** 아키텍처 경량화+SGD 차등학습률(+18.65%p), Sports-1M 전이학습(+2.89%p), Label Smoothing(+3.77%p), 해상도 확대(+1.13%p)를 단계적으로 적용.
